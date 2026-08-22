@@ -15,7 +15,7 @@ function Hero() {
 
                 <br /><br />
                 <hr style={{ height: '0.5px', border: 'none', backgroundColor: '#2e2d2dd6' }} />
-                <h3 style={{ margin: '2.5rem 1rem', fontSize: '1rem' }}><span>•</span>  AVAILABLE FOR OPPORTUNITIES</h3>
+                <h3 style={{ margin: '2.5rem 1rem', fontSize: '1rem' }}><span className="cursor">•</span>  AVAILABLE FOR OPPORTUNITIES</h3>
 
             </div>
 

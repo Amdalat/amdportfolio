@@ -1,7 +1,16 @@
 *{
   background-color: #000;
-  color: #fff;
   box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
 }
 
 .cursor {
@@ -54,9 +63,19 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 1rem 3rem;
+  margin-top: 0.2rem;
   border: 1px solid #2e2d2d8f;
   border-radius: 1rem 1rem 0 0;
+}
+
+.menutoggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 footer{
@@ -64,6 +83,7 @@ footer{
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 3rem;
+  margin-bottom: 0.2rem;
   border: 1px solid #2e2d2d69;
   border-radius: 0 0 1rem 1rem;
 }
@@ -77,15 +97,16 @@ ul{
 li{
   list-style-type: none;
 }
-li a{
+a{
   text-decoration: none;
+  color: #fff;
 }
 
 #hero{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 8rem;
   position: relative;
   overflow: hidden;
 }
@@ -102,7 +123,7 @@ li a{
     ),
     linear-gradient(
       90deg,
-      rgba(255,255,255,0.03) 1px,
+      rgba(219, 23, 23, 0.03) 1px,
       transparent 1px
     );
 
@@ -125,7 +146,7 @@ li a{
   border: 1px solid #2e2d2d;
   border-radius: 0.2rem;
   padding: 1rem 2rem;
-  width: 200px;
+  width: 300px;
   font-family: monospace, sans-serif;
 }
 
@@ -143,7 +164,8 @@ li a{
 #work{
   border-top: 1px solid #2e2d2d8f;
   border-bottom: 1px solid #2e2d2d8f;
-  padding: 0 2rem;
+  padding: 0 8rem;
+  font-family: monospace, sans-serif;
 }
 
 section{
@@ -162,18 +184,17 @@ section{
 
 .workitem{
   box-sizing: border-box;
-  /* border-top: 1px solid #2e2d2d8f;
+  border-top: 1px solid #2e2d2d8f;
   border-bottom: 1px solid #2e2d2d8f;
-  border-radius: 0.5rem; */
+  border-radius: 0.5rem;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
   width: 95%;
-  /* background-color: red; */
 }
 
-.workitem p, h2, h5{
+.workitem p, .workitem h2, .workitem h5{
   margin: 5px 0;
 }
 
@@ -187,13 +208,20 @@ section{
 
 #about {
   display: flex;
-  padding: 0 2rem;
+  padding: 0 8rem;
   margin: 2rem 0;
   font-family: monospace, sans-serif;
 }
 
 #aboutleft{
   padding: 1rem 2rem;
+}
+#aboutright{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: #15ed15; */
+  background: linear-gradient(to right, #0930096f, #15ed155d );
 }
 
 #aboutleft,
@@ -206,29 +234,31 @@ section{
 .aboutitem{
   border: 1px solid #2e2d2d8f;
   padding: 0 2rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1rem;
   align-items: center;
-  gap: 2rem;
-  /* width: 89.6%; */
   width: 100%;
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 1030px) {
+  #hero, #about, #work{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    /* font-size: smaller; */
+  }
+}
+
 @media screen and (max-width: 768px) {
   nav {
-    padding: 0 1rem;
-  }
-
-  nav ul {
-    gap: 1rem;
-    padding-left: 0;
+    position: relative;
   }
 
   #hero {
     flex-direction: column;
     align-items: stretch;
     gap: 3rem;
-    padding: 2rem 1rem;
   }
 
   #heroright {
@@ -252,7 +282,50 @@ section{
 
   .workitem {
     width: 100%;
-    flex-direction: column;
     gap: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem;
+  }
+
+  footer ul {
+    gap: 1.5rem;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .menutoggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    margin: 0;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #000;
+    border: 1px solid #2e2d2d8f;
+    z-index: 10;
+  }
+
+  nav ul.open {
+    display: flex;
+    border-bottom: 1px gray solid;
+  }
+
+  #heroleft h1{
+    font-size: 3.7rem;
   }
 }

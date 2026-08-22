@@ -1,19 +1,21 @@
-function Navbar() {
-    return (
-        <>
-            <nav>
-                <h3>AMDALAT.DEV</h3>
-                <ul>
-                    <li><a href="/">WORK</a></li>
-                    <li><a href="/about">ABOUT</a></li>
-                    <li><a href="/contact">CONTACT</a></li>
-                </ul>
+import { useState } from "react";
 
-                {/* //put green dot yet */}
-            </nav>
+function Navbar() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    return (
+        <nav>
+        <a href="#home">AMDALAT.DEV</a>
+
+        <button className="menutoggle" onClick={() => setMenuOpen(!menuOpen)} > {menuOpen ? "✕" : "☰"} </button>
         
-        </>
-    )
+        <ul className={menuOpen ? "open" : ""}>
+            <li><a href="#work" onClick={() => setMenuOpen(false)}>WORK</a></li>
+            <li><a href="#about" onClick={() => setMenuOpen(false)}>ABOUT</a></li>
+            <li><a href="#contact" onClick={() => setMenuOpen(false)}>CONTACT</a></li>
+        </ul>
+        </nav>
+    );
 }
 
 export default Navbar

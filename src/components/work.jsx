@@ -9,6 +9,7 @@ function Work() {
             <div id="workbody">
                 <WorkItem/>
                 <WorkItem/>
+                <WorkItem/>
             </div>
             
         </div>
@@ -28,7 +29,7 @@ function WorkItem() {
                 
                 <section>
                     <p style={{ color: 'rgb(99, 99, 99)' }}>React . Node . FastAPI. XGBoost</p>
-                    <p className="green" style={{ marginRight: '3rem' }}>VIEW CASE FILE →</p>
+                    <a href="/" className="green" style={{ marginRight: '3rem' }}>VIEW CASE FILE →</a>
                 </section>
                 
             </div>
