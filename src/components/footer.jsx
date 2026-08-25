@@ -24,7 +24,8 @@ function Footer() {
                     <a href="/" >AMDALAT.DEV</a>
                     <p style={{  color:"#737272", fontSize:"0.8rem" }}>&copy; 2026 AMDALAT</p>
                     <p style={{  color:"#737272", fontSize:"0.8rem" }}>💚 BUILT WITH REACT</p>
-                    <a href="/" style={{ color: '#15ed15' ,fontSize: '2rem' }}>&#8599;</a>
+                    <a href="/" style={{ color: '#15ed15' ,fontSize: '2rem' }}>&#8593;</a>
+                    {/* 8599 */}
                 </div>
             </footer>
         </>

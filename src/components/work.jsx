@@ -5,7 +5,7 @@ function Work() {
             category: "FULL-STACK / MACHINE LEARNING",
             tech: ["React", "Node.js", "FastAPI", "XGBoost"],
             github: "https://github.com/Amdalat/fyp_cppds",
-            demo: "",
+            demo: "https://fyp-cppds-frontend.onrender.com/",
             description:
                 "A full-stack intelligent verification system combining database verification with machine-learning classification to detect potentially counterfeit pharmaceutical products."
         },
@@ -64,8 +64,7 @@ function Work() {
 
                                     <section style={{ gap:"0.5rem" }}>
                                         <a href={project.github} target="_blank" rel="noopener noreferrer" className="green" style={{ marginRight: '3rem' }}>VIEW CASE FILE <span className="hintx">→</span></a>
-                                        <a href="/" className="green" style={{ marginRight: '3rem' }}>VIEW DEMO <span className="hintx">→</span></a>
-
+                                        {project.demo ? (<a href={project.demo} target="_blank" rel="noopener noreferrer" className="green" style={{ marginRight: '3rem' }}>VIEW DEMO <span className="hintx">→</span></a>): null}
                                     </section>
                                 </section>
                                 

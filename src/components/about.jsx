@@ -8,7 +8,6 @@ function About() {
             "HTML",
             "CSS",
             "JavaScript",
-            "TypeScript",
             "React",
             "Vite"
         ],
@@ -23,21 +22,23 @@ function About() {
         ],
 
         languages: [
-            "PHP",
             "JavaScript",
-            "TypeScript",
+            "PHP",
             "Python",
-            "Java",
-            "C++",
             "SQL"
+        ],
+
+        databases: [
+            "SQLite",
+            "MySQL",
+            "MongoDB"
         ],
 
         tools: [
             "Git",
             "GitHub",
             "VS Code",
-            "Postman",
-            "SQLite"
+            "Postman"
         ]
     };
 
@@ -92,6 +93,7 @@ function About() {
                     <AboutItem head="LANGUAGES" items={techStack.languages}/>
                     <AboutItem head="BACKEND" items={techStack.backend}/>
                     <AboutItem head="FRONTEND" items={techStack.frontend}/>
+                    <AboutItem head="DATABASES" items={techStack.databases}/>
                     <AboutItem head="TOOLS" items={techStack.tools}/>
                 </div>
             </div>
@@ -112,7 +114,7 @@ function About() {
                                     <p style={{ color: 'rgb(121, 121, 121)' }}>{x.description}</p>
                                     <br />
                                     {/* <button> */}
-                                        <a href="/" className="green">MORE <span className="hintx">→</span></a>
+                                        <a href="#hero" className="green">MORE <span className="hintx">→</span></a>
                                     {/* </button> */}
                                 </div>
                             </div>  
