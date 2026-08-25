@@ -1,12 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import cv from "../assets/amdalat_cv_pdf.pdf";
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setMenuOpen(false);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <nav id="navbar">
-            <a href="#home">AMDALAT.DEV</a>
+        <nav>
+            <a href="/">AMDALAT.DEV</a>
 
             <button className="menutoggle" onClick={() => setMenuOpen(!menuOpen)} > {menuOpen ? "✕" : "☰"} </button>
             

@@ -98,7 +98,7 @@ function About() {
 
 
             <div id="experience">
-                <h2>BEYOND CODE_</h2>
+                <h2>BEYOND CODE<span className="cursor green">_</span></h2>
                 <div id="experiencebody">
                     {experiences.map((x, index) => {
                         return(

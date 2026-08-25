@@ -8,11 +8,11 @@ function Footer() {
         <>
             <footer>
                 <div id="contact">
-                    <h3 style={{ color: '#464646' }}>LET'S BUILD SOMETHING GREAT</h3>
+                    <h3 style={{ color: '#464646' }}>LET'S BUILD SOMETHING GREAT<span className="blockcursor" style={{ backgroundColor:"green", color:"green" }}>.</span></h3>
                     <ul>
-                        <li><a href="https://github.com/Amdalat/" className='footericons'><FontAwesomeIcon icon={faGithub} /></a></li>
-                        <li><a href="https://www.linkedin.com/in/amdalat-adetokunbo-71683327a" className="footericons"><FontAwesomeIcon icon={faLinkedin} /></a></li>
-                        <li><a href="mailto:hmayomikun@gmail.com@gmail.com" className="footericons"><FontAwesomeIcon icon={faEnvelope} /></a></li>
+                        <li><a href="https://github.com/Amdalat/"  target="_blank" rel="noopener noreferrer" className='footericons'><FontAwesomeIcon icon={faGithub} /></a></li>
+                        <li><a href="https://www.linkedin.com/in/amdalat-adetokunbo-71683327a" target="_blank" rel="noopener noreferrer" className="footericons"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                        <li><a href="mailto:hmayomikun@gmail.com@gmail.com" target="_blank" rel="noopener noreferrer" className="footericons"><FontAwesomeIcon icon={faEnvelope} /></a></li>
                         {/* <li><a href="tel:+2349128925218" className="footericons"><FontAwesomeIcon icon={faPhone} /></a></li> */}
                         {/* <li><a href="#hero" style={{ color: '#15ed15' ,fontSize: '3rem', marginTop: "-60px" }}>↗</a></li> */}
                     </ul>
@@ -21,11 +21,10 @@ function Footer() {
                 <hr style={{ width:"90%", height: '0.5px', border: 'none', backgroundColor: '#2e2d2dd6' }} />
 
                 <div id="credits">
-                    <a href="#navbar" >AMDALAT.DEV</a>
+                    <a href="/" >AMDALAT.DEV</a>
                     <p style={{  color:"#737272", fontSize:"0.8rem" }}>&copy; 2026 AMDALAT</p>
                     <p style={{  color:"#737272", fontSize:"0.8rem" }}>💚 BUILT WITH REACT</p>
-                    {/* <a href="#hero">↗</a> */}
-                    <a href="#navbar" style={{ color: '#15ed15' ,fontSize: '2rem', marginTop: "-10px" }}>↗</a>
+                    <a href="/" style={{ color: '#15ed15' ,fontSize: '2rem' }}>&#8599;</a>
                 </div>
             </footer>
         </>
