@@ -14,6 +14,8 @@ function App() {
       <Work/>
       <About/>
       <Footer/>
+
+      {/* <a href="#hero" className="goup">↗</a> */}
     </>
   )
 }

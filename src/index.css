@@ -1,5 +1,5 @@
 *{
-  background-color: #000;
+  /* background-color: #000; */
   box-sizing: border-box;
 }
 
@@ -26,6 +26,16 @@ html, body, #root {
   margin-left: 2px;
 }
 
+/* .hintx{
+  transition: 1s ease;
+  font-size: 60px;
+}
+
+.hintx:hover{
+  transform: translateX(-50%) translateY(-3px);
+  color: red;
+} */
+
 @keyframes blink2 {
   0%,
   50% {
@@ -44,10 +54,27 @@ html, body, #root {
   }
 }
 
+li{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
 .green{
   color: #15ed15;
 }
 
+.goup{
+  color: #15ed15 ;font-size: 3rem; 
+  padding: 1.5rem;
+  margin-top: -110px;
+  position: static;
+  float: inline-end;
+}
+
+/* in progress */
 .distort-text span {
   display: inline-block;
   transition: transform 0.15s ease;
@@ -59,14 +86,33 @@ html, body, #root {
   transform: translateX(-4px) skewX(10deg);
 }
 
+/* .navbar-hidden {
+  transform: translateY(-100%);
+} */
+
 nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
-  margin-top: 0.2rem;
   border: 1px solid #2e2d2d8f;
   border-radius: 1rem 1rem 0 0;
+  background-color: #000;
+
+  /* position: fixed;
+  width: 100%;
+  z-index: 9; */
+
+  /* position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease; */
+}
+
+nav ul{
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
 .menutoggle {
@@ -78,35 +124,43 @@ nav{
   cursor: pointer;
 }
 
-footer{
+#contact, #credits{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 3rem;
+  padding: 0 3rem; 
+}
+
+#credits a:nth-of-type(2){
+  display: none;
+  color: #15ed15;
+  font-size: 2rem;
+  margin-top: -10px
+}
+
+footer{
   margin-bottom: 0.2rem;
   border: 1px solid #2e2d2d69;
   border-radius: 0 0 1rem 1rem;
 }
 
-ul{
+footer ul {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  padding-right: 2.5rem;
+  gap: 2rem
 }
 
-li{
-  list-style-type: none;
-}
-a{
-  text-decoration: none;
-  color: #fff;
+.footericons{
+  color: #7b7a7a;
+  font-Size: 2rem
 }
 
 #hero{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 8rem;
+  padding: 2rem 8rem 2rem 8rem;
   position: relative;
   overflow: hidden;
 }
@@ -161,7 +215,7 @@ a{
   z-index: 1;
 }
 
-#work{
+#work, #experience{
   border-top: 1px solid #2e2d2d8f;
   border-bottom: 1px solid #2e2d2d8f;
   padding: 0 8rem;
@@ -182,7 +236,7 @@ section{
   align-items: center;
 }
 
-.workitem{
+.workitem, .xcard{
   box-sizing: border-box;
   border-top: 1px solid #2e2d2d8f;
   border-bottom: 1px solid #2e2d2d8f;
@@ -194,23 +248,49 @@ section{
   width: 95%;
 }
 
-.workitem p, .workitem h2, .workitem h5{
+.workitem p, .workitem h2, .workitem h5, .xcard p, .xcard h2, .xcard h5{
   margin: 5px 0;
 }
 
 .workitemno{
   font-size: 4rem;
 }
+.xcardpic{
+  font-size: 3rem;
+}
 
-.workitemdesc{
+.xcarddesc, .workitemdesc{
   width: 100%;
 }
 
-#about {
+.xcard{
+  align-items: center;
+  /* background-color: white; */
+  border: 2px #a09f9f solid;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  /* width: 500px; */
+  gap: 1.5rem;
+}
+
+/* .xcard button{
+  background: none;
+  border: 2px #a09f9f solid;
+
+} */
+
+#about, #experiencebody {
   display: flex;
   padding: 0 8rem;
   margin: 2rem 0;
   font-family: monospace, sans-serif;
+}
+
+#experiencebody{
+  /* overflow-x: scroll; */
+  gap: 2rem;
+  padding: 0;
+  flex-wrap: nowrap;
 }
 
 #aboutleft{
@@ -242,17 +322,48 @@ section{
   box-sizing: border-box;
 }
 
+
+
+
 @media screen and (max-width: 1030px) {
-  #hero, #about, #work{
+  #hero, #about, #work, #experience{
     padding-left: 2rem;
     padding-right: 2rem;
-    /* font-size: smaller; */
+  }
+  .xcard{
+    flex-direction: column;
   }
 }
 
+/* @media screen and (max-width: 920px) {
+  #experiencebody{
+    flex-direction: column;
+  }
+} */
+
 @media screen and (max-width: 768px) {
-  nav {
-    position: relative;
+  .menutoggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    margin: 0;
+    gap: 1rem;
+    padding: 1.3rem;
+    background: #000;
+    border: 1px solid #2e2d2d8f;
+    z-index: 10;
+  }
+
+  nav ul.open {
+    display: flex;
+    border-bottom: 1px gray solid;
   }
 
   #hero {
@@ -286,10 +397,22 @@ section{
     padding-left: 0.5rem;
   }
 
-  footer {
+  #contact {
     flex-direction: column;
     gap: 0;
     padding: 1rem;
+  }
+
+  #experiencebody{
+    flex-direction: column;
+  }
+
+  .xcard{
+    flex-direction: row;
+  }
+
+  .xcardpic{
+    font-size: 2rem;
   }
 
   footer ul {
@@ -301,31 +424,48 @@ section{
 }
 
 @media screen and (max-width: 510px) {
-  .menutoggle {
+  #heroleft h1{
+    font-size: 3.7rem;
+  }
+
+  #hero, #about, #work, #contact, #experience{
+    font-size: smaller;
+  }
+
+  #hero{
+    gap:1rem
+  }
+
+  .workitemno{
+    font-size: 3rem;
+  }
+  
+  #credits a:nth-child(1){
+    display: none;
+  }
+
+  #credits a:nth-of-type(2){
     display: block;
   }
 
-  nav ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
+  .footericons{
+    font-Size: 1.5rem
+  }
+
+  footer ul{
     margin: 0;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: #000;
-    border: 1px solid #2e2d2d8f;
-    z-index: 10;
+    gap: 1rem
   }
+}
 
-  nav ul.open {
-    display: flex;
-    border-bottom: 1px gray solid;
-  }
-
+@media screen and (max-width: 370px) {
   #heroleft h1{
-    font-size: 3.7rem;
+    font-size: 2.5rem;
+  }
+
+  .aboutitem{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
 }
