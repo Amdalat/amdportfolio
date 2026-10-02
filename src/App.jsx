@@ -1,23 +1,27 @@
 // import { useState } from 'react'
+import { Routes, Route } from "react-router";
 
-import Navbar from "./components/navbar"
-import Hero from "./components/hero"
-import Work from "./components/work"
-import About from "./components/about"
-import Footer from "./components/footer"
+import Home from "./pages/Home";
+import Project from "./pages/Projects";
+import Experience from "./pages/Experiences";
 
 function App() {
   return (
-    <>
-      <Navbar/>
-      <Hero/>
-      <Work/>
-      <About/>
-      <Footer/>
+    // <Home/>
+    <Routes>
+      <Route path="/" element={<Home />} />
 
-      {/* <a href="#hero" className="goup">↗</a> */}
-    </>
-  )
+      <Route
+          path="/work/:slug"
+          element={<Project />}
+      />
+      
+      <Route
+          path="/experience/:slug"
+          element={<Experience />}
+      />
+    </Routes>
+  );
 }
 
-export default App
+export default App;

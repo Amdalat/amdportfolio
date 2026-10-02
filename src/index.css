@@ -10,7 +10,7 @@ html, body, #root {
   background-color: #000;
   color: #fff;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 
 }
 
@@ -125,11 +125,7 @@ nav ul{
   cursor: pointer;
 }
 
-#home,
-#work,
-#about,
-#contact,
-#experience {
+#home, #work, #about, #contact, #experience, #intro {
   scroll-margin-top: 90px;
 }
 
@@ -331,15 +327,192 @@ section{
   box-sizing: border-box;
 }
 
+.padding8{
+  padding: 0 8rem;
+  font-family: monospace, sans-serif;
 
+}
 
+.info{
+  border-top: 1px solid #15ed15;
+  border-left: 1px solid #15ed15;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.dhpbox{
+  border: 2px green solid;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  word-wrap: break-word;
+  flex: 1;
+}
+
+.dhpimg{
+  border: 2px green solid;
+  border-radius: 100%;
+  padding: 0.1rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.squareimg{
+  border: 2px green solid;
+  border-radius: 1rem;
+  padding: 2rem 2.5rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.dhpbox h3, .dhpbox p{
+  margin: 1rem 0;
+  text-wrap: break-word;
+}
+
+.rowflex{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.rowflexscroll{
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  width: 100%;
+  scrollbar-width: none; /* Firefox */
+}
+
+.ss{
+  /* flex: 0 0 200px; */
+  height:200px;
+  border-radius: 1.5rem;
+}
+.ss img{
+  width: 400px;
+  height: 200px;
+}
+
+.rowflexscroll::-webkit-scrollbar {
+    display: none; /* Chrome, Edge, Safari */
+}
+
+#intro{
+  padding: 5rem 0 2rem 0;
+}
+
+.projectstack{
+  border: 2px solid green ;
+  padding: 0.5rem ;
+  border-radius: 80px ;
+  /* margin-right: 1rem;    */
+}
+
+#intro section{
+  display: flex;
+  justify-content: flex-start;
+  /* flex-wrap: wrap; */
+}
+
+#introbottom{
+  border: 1px solid #2e2d2d8f;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: -3rem;
+}
+
+.introimg{
+  background: linear-gradient(to right, #0930096f, #15ed155d );
+  border: 2px solid green;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 100%;
+  height: 330px;
+}
+
+.arrow{
+  font-size: 2rem;
+  color: #15ed15;
+  margin-top: 20px;
+}
+
+.icon3{
+  font-size: 3rem;
+}
+
+.textobox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* justify-content: space-between; */
+  gap: 0.5rem;
+  /* width: 23%; */
+  flex: 1;
+}
+
+.textobox h3, .textobox p{
+  margin: 0;
+}
+
+.nobox h3{
+  font-size: 1rem;
+}
+
+.nobox p{
+  font-size: 2rem;
+}
+
+.btndiv{
+  display: flex;
+  gap: 1rem; 
+  float: right;
+  /* justify-content: space-between; */
+  /* width: 100%; */
+}
+
+.transbtn{
+  border: 1px solid #15ed15;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: none;
+  color: #15ed15;
+  margin: 1rem 0;
+}
+
+.gapred{
+  justify-Content: flex-start; 
+  gap: 1rem
+}
 
 @media screen and (max-width: 1030px) {
-  #hero, #about, #work, #experience{
+  #hero, #about, #work, #experience, .padding8{
     padding-left: 2rem;
     padding-right: 2rem;
   }
   .xcard{
+    flex-direction: column;
+  }
+
+  .rowflex{
+    flex-wrap: wrap;
+  }
+
+  #introbottom{
+    display: flex;
     flex-direction: column;
   }
 }
@@ -441,6 +614,10 @@ section{
     font-size: 3.7rem;
   }
 
+  .padding8{
+    font-size: x-small;
+  }
+
   #hero, #about, #work, #contact, #experience{
     font-size: smaller;
   }
@@ -468,6 +645,34 @@ section{
   footer ul{
     margin: 0;
     gap: 1rem
+  }
+
+  .gapred{
+    gap: 0.5rem;
+  }
+
+  .ss{
+    height:100px;
+  }
+  .ss img{
+    width: 200px;
+    height: 100px;
+  }
+
+  .nobox h3{
+    font-size: 0.6rem;
+  }
+
+  .nobox p{
+    font-size: 1.6rem;
+  }
+
+  #introbottom{
+    gap: 1rem;
+  }
+
+  .icon3{
+    font-size: 2rem;
   }
 }
 

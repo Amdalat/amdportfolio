@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-regular-svg-icons';
-import { faLaptopCode, faCode } from '@fortawesome/free-solid-svg-icons';
+import { experiences } from '../assets/projectsData';
+import { Link } from 'react-router';
+// import { faUser } from '@fortawesome/free-regular-svg-icons';
+// import { faLaptopCode, faCode } from '@fortawesome/free-solid-svg-icons';
 
 function About() {
     const techStack = {
@@ -42,41 +44,6 @@ function About() {
         ]
     };
 
-    const experiences = [
-        {
-            type: "LEADERSHIP",
-            period: "2025-26",
-            title: "VICE PRESIDENT",
-            organization: "Crescent University, Abeokuta.",
-            location: "Ogun, Nigeria",
-            icon: faUser,
-            description:
-            "Supported departmental leadership, coordinated student initiatives, and represented students while working with staff and colleagues."
-        },
-
-        {
-            type: "INTERNSHIP",
-            period: "JULY-OCT 2025",
-            title: "IT INTERN",
-            organization: "Adron Homes & Properties Ltd.",
-            location: "Lagos, Nigeria",
-            icon: faLaptopCode,
-            description:
-            "Gained practical experience in IT operations and software development, contributing to technical tasks and supporting day-to-day digital systems."
-        },
-
-        {
-            type: "INTERNSHIP",
-            period: "JULY-OCT 2025",
-            title: "FRONTEND INTERN",
-            organization: "Qace Homes",
-            location: "Lagos, Nigeria",
-            icon: faCode,
-            description:
-            "Worked on frontend development, building and refining web interfaces while gaining practical experience with modern web technologies."
-        }
-    ];
-
     return (
         <>
             <div id="about">
@@ -107,14 +74,15 @@ function About() {
                             <div className="xcard" key={index}>
                                 <div className="xcardpic green"><FontAwesomeIcon icon={x.icon} /></div>
                                 <div className="xcarddesc">
-                                    <h5 style={{ color: 'rgb(99, 99, 99)' }}>/ {x.type} / {x.period}</h5>
+                                    <h5 style={{ color: 'rgb(99, 99, 99)' }}>/ {x.category} / {x.period}</h5>
                                     <h2 className="green">{x.title}</h2>
                                     <p style={{ color: 'rgb(99, 99, 99)' }}>{x.organization} | {x.location}</p>
                                     <br />
                                     <p style={{ color: 'rgb(121, 121, 121)' }}>{x.description}</p>
                                     <br />
                                     {/* <button> */}
-                                        <a href="#hero" className="green">MORE <span className="hintx">→</span></a>
+                                        <Link to={`/experience/${x.slug}`} className="green">MORE <span className="hintx">→</span></Link>
+                                        {/* <a href="#hero" className="green">MORE <span className="hintx">→</span></a> */}
                                     {/* </button> */}
                                 </div>
                             </div>  
@@ -138,24 +106,5 @@ function AboutItem({head, items}) {
         </div>
     )
 }
-
-// function Xcard() {
-//     return (
-//         <div className="xcard">
-//             <div className="xcardpic green"><FontAwesomeIcon icon={faUser} /></div>
-//             <div className="xcarddesc">
-//                 <h5 style={{ color: 'rgb(99, 99, 99)' }}>/ LEADERSHIP | 2025-26</h5>
-//                 <h2 className="green">VICE PRESIDENT</h2>
-//                 <p style={{ color: 'rgb(99, 99, 99)' }}>Crescent | Lagos, Nigeria</p>
-//                 <br />
-//                 <p style={{ color: 'rgb(121, 121, 121)' }}>lorem ipsum fsdeuf dgfhdsfohsyidse ydsjiidh yuoed yydjd hehfi hehfd ywgue yefnbud eu eehrjeygw</p>
-//                 <br />
-//                 {/* <button> */}
-//                     <a href="/" className="green">MORE <span className="hintx">→</span></a>
-//                 {/* </button> */}
-//             </div>
-//         </div>
-//     )
-// }
 
 export default About

@@ -1,46 +1,7 @@
+import { Link } from "react-router"
+import {projects} from "../assets/projectsData"
+
 function Work() {
-    const projects = [
-        {
-            title: "COUNTERFEIT PHARMACEUTICAL DETECTION",
-            category: "FULL-STACK / MACHINE LEARNING",
-            tech: ["React", "Node.js", "FastAPI", "XGBoost"],
-            github: "https://github.com/Amdalat/fyp_cppds",
-            demo: "https://fyp-cppds-frontend.onrender.com/",
-            description:
-                "A full-stack intelligent verification system combining database verification with machine-learning classification to detect potentially counterfeit pharmaceutical products."
-        },
-
-        {
-            title: "LARAVEL WEB APPLICATION",
-            category: "BACKEND / FULL-STACK",
-            tech: ["PHP", "Laravel"],
-            github: "https://github.com/Amdalat/siliconnLaravel",
-            demo: "",
-            description:
-                "A web application built with Laravel, demonstrating server-side application development and backend architecture."
-        },
-
-        {
-            title: "NODE.JS BACKEND APPLICATION",
-            category: "BACKEND",
-            tech: ["Node.js", "Express.js", "REST API"],
-            github: "https://github.com/Amdalat/horizonnodeass2",
-            demo: "",
-            description:
-                "A backend application built with Node.js and Express, using structured controllers, models, middleware and API routes."
-        },
-
-        {
-            title: "WEATHER APPLICATION",
-            category: "FRONTEND / API",
-            tech: ["React", "JavaScript", "REST API"],
-            github: "https://github.com/Amdalat/weatherAppWApiReact",
-            demo: "",
-            description:
-                "A React application that consumes a weather API to retrieve and display weather information."
-        }
-    ];
-
     return (
         <div id="work">
             <section id="workhead">
@@ -62,9 +23,10 @@ function Work() {
                                 <section>
                                     <p style={{ color: 'rgb(99, 99, 99)' }}>{project.tech.join(" • ")}</p>
 
-                                    <section style={{ gap:"0.5rem" }}>
-                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="green" style={{ marginRight: '3rem' }}>VIEW CASE FILE <span className="hintx">→</span></a>
-                                        {project.demo ? (<a href={project.demo} target="_blank" rel="noopener noreferrer" className="green" style={{ marginRight: '3rem' }}>VIEW DEMO <span className="hintx">→</span></a>): null}
+                                    <section style={{ gap:"2rem", marginRight: '3rem' }}>
+                                        <Link to={`/work/${project.slug}`} className="green">VIEW CASE FILE <span className="hintx">→</span></Link>
+                                        {/* <a href={project.github} target="_blank" rel="noopener noreferrer" className="green">VIEW CASE FILE <span className="hintx">→</span></a> */}
+                                        {project.demo ? (<a href={project.demo} target="_blank" rel="noopener noreferrer" className="green">VIEW DEMO <span className="hintx">→</span></a>): null}
                                     </section>
                                 </section>
                                 
