@@ -14,8 +14,14 @@ function ProjIntro({projectIndex}) {
                         </div>
                         <br />
                         <div id="introbottom">
-                            {/* <img src="" alt="projectimg" /> */}
-                            <div className="introimg"></div>
+                            <div className="introimg">
+                                {project.introImage && (
+                                <img
+                                    src={project.introImage}
+                                />   
+                                )}                                 
+                            </div>
+
                             <div id="introbottomdesc">
                                 {project.overview && (
                                     <>
@@ -40,7 +46,7 @@ function ProjIntro({projectIndex}) {
 
 function ExpIntro({experienceIndex}) {
     return (
-        <div id="intro">
+        <div id="intro" style={{ paddingBottom:"1rem" }}>
             {experiences.filter((experience, index) => index==experienceIndex).map((experience) => {
                 return (
                     <div key={experienceIndex+1}>
@@ -52,24 +58,9 @@ function ExpIntro({experienceIndex}) {
                             
                         </div>
                         <br />
-                        {/* <div id="introbottom">
-                            <div id="introbottomdesc">
-                                {experience.overview && (
-                                    <>
-                                        <h3>{experience.overview.title}</h3>
-                                        <p>{experience.overview.text}</p>
-                                        <h3>THE SOLUTION</h3>
-                                    </>
-                                )}
-                                {experience.description}
-                            </div>
-
-                        </div> */}
                     </div>
                 )
             })}
-
-
         </div>
 
     )

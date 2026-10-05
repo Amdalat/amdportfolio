@@ -316,7 +316,7 @@ const projects = [
         description:
             "A web-based intelligent system for verifying registered pharmaceutical products and classifying potentially counterfeit products using machine learning.",
 
-        introImage: "",
+        introImage: `${import.meta.env.BASE_URL}images/cppds_help.png`,
 
         overview: {
             title: "THE PROBLEM",
@@ -400,10 +400,13 @@ const projects = [
             }
         ],
 
-        screenshots: [
-            `${import.meta.env.BASE_URL}images/IMG_20191025_224137.jpg`,
-            `${import.meta.env.BASE_URL}images/IMG_20191025_224137.jpg`,
-            `${import.meta.env.BASE_URL}images/IMG_20191025_224137.jpg`,
+        screenshots: [            
+            `${import.meta.env.BASE_URL}images/cppds_err_mess.png`,
+            `${import.meta.env.BASE_URL}images/cppds_db_true.png`,
+            `${import.meta.env.BASE_URL}images/cppds_db_false.png`,
+            `${import.meta.env.BASE_URL}images/cppds_ml_true.png`,
+            `${import.meta.env.BASE_URL}images/cppds_ml_false.png`,
+            `${import.meta.env.BASE_URL}images/cppds_help.png`,
         ],
 
         challenges: [
@@ -606,7 +609,7 @@ const projects = [
         description:
             "A React weather application that consumes an external API and presents retrieved weather information through a simple interactive interface.",
 
-        introImage: "",
+        introImage: `${import.meta.env.BASE_URL}images/weather_api.png`,
 
         overview: {
             title: "THE PROJECT",
