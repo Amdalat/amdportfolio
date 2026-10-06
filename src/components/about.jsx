@@ -72,16 +72,16 @@ function About() {
                     {experiences.map((x, index) => {
                         return(
                             <div className="xcard" key={index}>
-                                <div className="xcardpic green"><FontAwesomeIcon icon={x.icon} /></div>
+                                <div className="xcardpic faicon"><FontAwesomeIcon icon={x.icon} /></div>
                                 <div className="xcarddesc">
-                                    <h5 style={{ color: 'rgb(99, 99, 99)' }}>/ {x.category} / {x.period}</h5>
-                                    <h2 className="green">{x.title}</h2>
-                                    <p style={{ color: 'rgb(99, 99, 99)' }}>{x.organization} | {x.location}</p>
+                                    <h5>/ {x.category} / {x.period}</h5>
+                                    <h2>{x.title}</h2>
+                                    <p>{x.organization} | {x.location}</p>
                                     <br />
-                                    <p style={{ color: 'rgb(121, 121, 121)' }}>{x.description}</p>
+                                    <p>{x.description}</p>
                                     <br />
                                     {/* <button> */}
-                                        <Link to={`/experience/${x.slug}`} className="green">MORE <span className="hintx">→</span></Link>
+                                        <Link to={`/experience/${x.slug}`} className="link">MORE <span className="hintx">→</span></Link>
                                         {/* <a href="#hero" className="green">MORE <span className="hintx">→</span></a> */}
                                     {/* </button> */}
                                 </div>

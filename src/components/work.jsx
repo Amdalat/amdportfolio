@@ -13,20 +13,20 @@ function Work() {
                 { projects.map((project, index) => {
                     return (
                         <div className="workitem" key={index}>
-                            <div className="workitemno green">{ (index<9)? ("0"+(index+1)) : (index+1) }</div>
+                            <div className="workitemno">{ (index<9)? ("0"+(index+1)) : (index+1) }</div>
                             <div className="workitemdesc">
-                                <h5 style={{ color: 'rgb(99, 99, 99)' }}>/ PROJECT</h5>
+                                <h5>/ PROJECT</h5>
                                 <section>
                                     <h2>{project.title}</h2>
                                     <h2 style={{ fontSize: "2rem", fontWeight: "lighter", color: 'rgb(99, 99, 99)' }}>+</h2>
                                 </section>
                                 <section>
-                                    <p style={{ color: 'rgb(99, 99, 99)' }}>{project.tech.join(" • ")}</p>
+                                    <p>{project.tech.join(" • ")}</p>
 
                                     <section style={{ gap:"2rem", marginRight: '3rem' }}>
-                                        <Link to={`/work/${project.slug}`} className="green">VIEW CASE FILE <span className="hintx">→</span></Link>
+                                        <Link to={`/work/${project.slug}`} className="link">VIEW CASE FILE <span className="hintx">→</span></Link>
                                         {/* <a href={project.github} target="_blank" rel="noopener noreferrer" className="green">VIEW CASE FILE <span className="hintx">→</span></a> */}
-                                        {project.demo ? (<a href={project.demo} target="_blank" rel="noopener noreferrer" className="green">VIEW DEMO <span className="hintx">→</span></a>): null}
+                                        {project.demo ? (<a href={project.demo} target="_blank" rel="noopener noreferrer">VIEW DEMO <span className="hintx">→</span></a>): null}
                                     </section>
                                 </section>
                                 
@@ -40,26 +40,5 @@ function Work() {
         </div>
     )
 };
-
-// function WorkItem() {
-//     return (
-//         <div className="workitem">
-//             <div className="workitemno green">01</div>
-//             <div className="workitemdesc">
-//                 <h5 style={{ color: 'rgb(99, 99, 99)' }}>/ PROJECT</h5>
-//                 <section>
-//                     <h2>COUNTERFEIT PHARMACEUTICAL DETECTION</h2>
-//                     <h2 style={{ fontSize: "2rem", fontWeight: "lighter", color: 'rgb(99, 99, 99)' }}>+</h2>
-//                 </section>
-                
-//                 <section>
-//                     <p style={{ color: 'rgb(99, 99, 99)' }}>React . Node . FastAPI. XGBoost</p>
-//                     <a href="/" className="green" style={{ marginRight: '3rem' }}>VIEW CASE FILE <span className="hintx">→</span></a>
-//                 </section>
-                
-//             </div>
-//         </div>
-//     )
-// }
 
 export default Work

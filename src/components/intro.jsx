@@ -14,7 +14,7 @@ function ProjIntro({projectIndex}) {
                         </div>
                         <br />
                         <div id="introbottom">
-                            <div className="introimg">
+                            <div className="introimg" style={!project.introImage ? { background: `linear-gradient(to right, #0930096f, #15ed155d )` } : null}>
                                 {project.introImage && (
                                 <img
                                     src={project.introImage}
