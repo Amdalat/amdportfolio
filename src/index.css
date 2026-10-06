@@ -319,7 +319,7 @@ section{
   border: 2px solid var(--green-light) ;
   background: var(--green-dark);
   color: var(--green-pale);
-  font-size: 1.01rem;
+  /* font-size: 1.01rem; */
 
   p, h5{
     color: var(--light-grey-text);
@@ -453,7 +453,7 @@ section{
   /* border: 2px solid var(--green-light) ; */
   background: var(--green-dark);
   color: var(--green-pale);
-  font-size: 1.02rem;
+  /* font-size: 1.02rem; */
 }
 
 .dhpimg{
