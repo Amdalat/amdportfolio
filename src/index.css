@@ -445,7 +445,7 @@ section{
   padding: 0.5rem;
   word-wrap: break-word;
   flex: 1;
-    cursor: pointer;
+  cursor: pointer;
 }
 .dhpbox:hover{
   transition: 0.1s ease;

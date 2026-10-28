@@ -417,180 +417,380 @@ const projects = [
         ]
     },
 
-
     {
-        title: "LARAVEL WEB APPLICATION",
-        slug: "laravel-web-app",
-        category: ["BACKEND", "FULL-STACK"],
+        title: "BOOK MANAGEMENT SYSTEM",
+        slug: "book-management-system",
+        category: ["FULL-STACK"],
 
         tech: [
-            "PHP",
-            "Laravel",
-            "MySQL",
-            "Blade"
-        ],
-
-        github: "https://github.com/Amdalat/siliconnLaravel",
-        demo: "",
-
-        description:
-            "A Laravel-based web application built to explore server-side development, application structure, database interaction and backend functionality.",
-
-        introImage: "",
-
-        overview: {
-            title: "THE PROJECT",
-            text:
-                "A backend-focused web application built with Laravel to gain practical experience with server-side development, routing, database interaction and application structure."
-        },
-
-        features: [
-            {
-                title: "ROUTING",
-                text: "Handles application requests through Laravel routes."
-            },
-            {
-                title: "SERVER-SIDE LOGIC",
-                text: "Implements application functionality using PHP and Laravel."
-            },
-            {
-                title: "DATABASE",
-                text: "Works with persistent application data through Laravel's database tools."
-            },
-            {
-                title: "APPLICATION STRUCTURE",
-                text: "Uses Laravel's structured approach to organizing application components."
-            }
-        ],
-
-        architecture: [
-            {
-                title: "FRAMEWORK",
-                text: "Laravel"
-            },
-            {
-                title: "LANGUAGE",
-                text: "PHP"
-            },
-            {
-                title: "DATABASE",
-                text: "MySQL"
-            }
-        ],
-
-        process: [
-            {
-                text: "Client sends a request."
-            },
-            {
-                text: "Laravel routes the request."
-            },
-            {
-                text: "Application logic processes the request."
-            },
-            {
-                text: "The application returns the appropriate response."
-            }
-        ],
-
-        screenshots: [],
-
-        challenges: [
-            "Understanding Laravel's application structure.",
-            "Working with server-side routing and application logic.",
-            "Connecting application functionality with persistent data."
-        ]
-    },
-
-
-    {
-        title: "NODE.JS BACKEND APPLICATION",
-        slug: "nodejs-backend-app",
-        category: ["BACKEND", "REST API"],
-
-        tech: [
+            "React",
+            "Bootstrap",
             "Node.js",
             "Express.js",
-            "REST API",
-            "MongoDB"
+            "MongoDB",
+            "Mongoose"
         ],
 
-        github: "https://github.com/Amdalat/horizonnodeass2",
-        demo: "",
+        github: "https://github.com/Amdalat/book_mgmt_sys",
+        demo: "https://book-mgmt-sys-4doq.onrender.com",
 
         description:
-            "A backend application built with Node.js and Express.js, focusing on REST API development, structured application architecture and backend functionality.",
+            "A web-based book management system that allows users to browse books, request access, and manage their personal libraries.",
 
-        introImage: "",
+        introImage: `${import.meta.env.BASE_URL}images/bookms_home.png`,
 
         overview: {
-            title: "THE PROJECT",
+            title: "THE PROBLEM",
             text:
-                "A backend-focused application created to practise building REST APIs with Node.js and Express.js while working with controllers, models, middleware and routes."
+                "Managing book access requires more than simply displaying available books. This project provides a system where users can request access to books and manage their personal libraries through an authenticated account."
         },
 
         features: [
             {
-                title: "REST API",
-                text: "Provides structured API endpoints for interacting with application data."
+                title: "USER AUTHENTICATION",
+                text: "Allows users to sign in to their accounts using token-based authentication."
             },
             {
-                title: "ROUTING",
-                text: "Organizes API endpoints using Express.js routes."
+                title: "BOOK MANAGEMENT",
+                text: "Supports book uploads and the management of book information."
             },
             {
-                title: "CONTROLLERS",
-                text: "Separates application logic from route definitions."
+                title: "ACCESS REQUESTS",
+                text: "Allows users to request access to books rather than accessing them automatically."
             },
             {
-                title: "MIDDLEWARE",
-                text: "Uses middleware to handle requests and application-level functionality."
+                title: "PERSONAL LIBRARY",
+                text: "Provides users with a library for managing books associated with their accounts."
             }
         ],
 
         architecture: [
             {
-                title: "RUNTIME",
-                text: "Node.js"
+                title: "FRONTEND",
+                text: "React + Vite"
             },
             {
-                title: "FRAMEWORK",
-                text: "Express.js"
-            },
-            {
-                title: "API",
-                text: "REST"
+                title: "BACKEND",
+                text: "Node.js + Express.js"
             },
             {
                 title: "DATABASE",
-                text: "MongoDB"
+                text: "MongoDB + Mongoose"
+            },
+            {
+                title: "AUTHENTICATION",
+                text: "JWT + HTTP cookies"
             }
         ],
 
         process: [
             {
-                text: "Client sends an HTTP request."
+                title: "User Sign-In",
+                text: "User authenticates to access their account."
             },
             {
-                text: "Express route receives the request."
+                title: "Browse Books",
+                text: "User explores the available books."
             },
             {
-                text: "Controller processes the request."
+                title: "Access Request",
+                text: "User submits a request for access to a selected book."
             },
             {
-                text: "The API returns a structured response."
+                title: "Library Management",
+                text: "The system manages books associated with the user's library."
             }
         ],
 
-        screenshots: [],
+        screenshots: [
+            `${import.meta.env.BASE_URL}images/bookms_book.png`,
+            `${import.meta.env.BASE_URL}images/bookms_author_requests.png`,
+            `${import.meta.env.BASE_URL}images/bookms_user_requests.png`,
+            `${import.meta.env.BASE_URL}images/bookms_signin.png`,
+            `${import.meta.env.BASE_URL}images/bookms_newbook.png`,
+            `${import.meta.env.BASE_URL}images/bookms_uploads.png`,
+        ],
 
         challenges: [
-            "Structuring a backend application into separate components.",
-            "Understanding how controllers, routes and middleware work together.",
-            "Designing and testing REST API endpoints."
+            "Implementing cookie-based authentication between the React frontend and Express backend.",
+            "Managing relationships between users, books, and library records.",
+            "Handling book access requests and request status updates.",
+            "Supporting book uploads and file handling."
         ]
     },
 
+    {
+        title: "COMPANY ARCHIVE MANAGEMENT SYSTEM",
+        slug: "company-archive-system",
+        category: ["FULL-STACK"],
+
+        tech: [
+            "React",
+            "Tailwind css",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Mongoose"
+        ],
+
+        github: "https://github.com/Amdalat/companyArchiveProj",
+        demo: "https://comparchiveamd.onrender.com",
+
+        description:
+            "A company-based management system that allows administrators to register and manage user details while enabling individual users to sign in to their accounts.",
+
+        introImage: `${import.meta.env.BASE_URL}images/archiveamd_admin_dash.png`,
+
+        overview: {
+            title: "THE PROBLEM",
+            text:
+                "Companies need a structured way to manage user information and provide account access to their staff. This project focuses on company administrators managing user details while allowing registered users to sign in independently."
+        },
+
+        features: [
+            {
+                title: "COMPANY ADMINISTRATION",
+                text: "Provides administrative functionality for managing users within a company."
+            },
+            {
+                title: "USER MANAGEMENT",
+                text: "Allows company administrators to add and manage user details."
+            },
+            {
+                title: "USER AUTHENTICATION",
+                text: "Allows registered users to sign in to their accounts."
+            },
+            {
+                title: "COMPANY-BASED ACCESS",
+                text: "Structures user management around individual companies and their administrators."
+            }
+        ],
+
+        architecture: [
+            {
+                title: "FRONTEND",
+                text: "React + Vite"
+            },
+            {
+                title: "BACKEND",
+                text: "Node.js + Express.js"
+            },
+            {
+                title: "DATABASE",
+                text: "MongoDB + Mongoose"
+            },
+            {
+                title: "AUTHENTICATION",
+                text: "JWT + HTTP cookies"
+            }
+        ],
+
+        process: [
+            {
+                title: "Administrator Sign-In",
+                text: "Company administrator signs in to manage company users."
+            },
+            {
+                title: "Add User",
+                text: "Administrator enters and saves a user's details."
+            },
+            {
+                title: "Manage Users",
+                text: "Administrator manages user information within the company."
+            },
+            {
+                title: "User Sign-In",
+                text: "Registered users sign in using their own accounts."
+            }
+        ],
+
+        screenshots: [
+            `${import.meta.env.BASE_URL}images/archiveamd_login.png`,
+            `${import.meta.env.BASE_URL}images/archiveamd_staff_dash.png`,
+            `${import.meta.env.BASE_URL}images/archiveamd_employees.png`,
+            `${import.meta.env.BASE_URL}images/archiveamd_settings.png`,
+            `${import.meta.env.BASE_URL}images/archiveamd_profile.png`,
+        ],
+
+        challenges: [
+            "Structuring user management around individual companies.",
+            "Separating administrator capabilities from regular user access.",
+            "Managing user authentication and account information.",
+            "Designing a scalable foundation for future archive functionality."
+        ]
+    },
+
+    // {
+    //     title: "LARAVEL WEB APPLICATION",
+    //     slug: "laravel-web-app",
+    //     category: ["BACKEND", "FULL-STACK"],
+
+    //     tech: [
+    //         "PHP",
+    //         "Laravel",
+    //         "MySQL",
+    //         "Blade"
+    //     ],
+
+    //     github: "https://github.com/Amdalat/siliconnLaravel",
+    //     demo: "",
+
+    //     description:
+    //         "A Laravel-based web application built to explore server-side development, application structure, database interaction and backend functionality.",
+
+    //     introImage: "",
+
+    //     overview: {
+    //         title: "THE PROJECT",
+    //         text:
+    //             "A backend-focused web application built with Laravel to gain practical experience with server-side development, routing, database interaction and application structure."
+    //     },
+
+    //     features: [
+    //         {
+    //             title: "ROUTING",
+    //             text: "Handles application requests through Laravel routes."
+    //         },
+    //         {
+    //             title: "SERVER-SIDE LOGIC",
+    //             text: "Implements application functionality using PHP and Laravel."
+    //         },
+    //         {
+    //             title: "DATABASE",
+    //             text: "Works with persistent application data through Laravel's database tools."
+    //         },
+    //         {
+    //             title: "APPLICATION STRUCTURE",
+    //             text: "Uses Laravel's structured approach to organizing application components."
+    //         }
+    //     ],
+
+    //     architecture: [
+    //         {
+    //             title: "FRAMEWORK",
+    //             text: "Laravel"
+    //         },
+    //         {
+    //             title: "LANGUAGE",
+    //             text: "PHP"
+    //         },
+    //         {
+    //             title: "DATABASE",
+    //             text: "MySQL"
+    //         }
+    //     ],
+
+    //     process: [
+    //         {
+    //             text: "Client sends a request."
+    //         },
+    //         {
+    //             text: "Laravel routes the request."
+    //         },
+    //         {
+    //             text: "Application logic processes the request."
+    //         },
+    //         {
+    //             text: "The application returns the appropriate response."
+    //         }
+    //     ],
+
+    //     screenshots: [],
+
+    //     challenges: [
+    //         "Understanding Laravel's application structure.",
+    //         "Working with server-side routing and application logic.",
+    //         "Connecting application functionality with persistent data."
+    //     ]
+    // },
+
+    // {
+    //     title: "NODE.JS BACKEND APPLICATION",
+    //     slug: "nodejs-backend-app",
+    //     category: ["BACKEND", "REST API"],
+
+    //     tech: [
+    //         "Node.js",
+    //         "Express.js",
+    //         "REST API",
+    //         "MongoDB"
+    //     ],
+
+    //     github: "https://github.com/Amdalat/horizonnodeass2",
+    //     demo: "",
+
+    //     description:
+    //         "A backend application built with Node.js and Express.js, focusing on REST API development, structured application architecture and backend functionality.",
+
+    //     introImage: "",
+
+    //     overview: {
+    //         title: "THE PROJECT",
+    //         text:
+    //             "A backend-focused application created to practise building REST APIs with Node.js and Express.js while working with controllers, models, middleware and routes."
+    //     },
+
+    //     features: [
+    //         {
+    //             title: "REST API",
+    //             text: "Provides structured API endpoints for interacting with application data."
+    //         },
+    //         {
+    //             title: "ROUTING",
+    //             text: "Organizes API endpoints using Express.js routes."
+    //         },
+    //         {
+    //             title: "CONTROLLERS",
+    //             text: "Separates application logic from route definitions."
+    //         },
+    //         {
+    //             title: "MIDDLEWARE",
+    //             text: "Uses middleware to handle requests and application-level functionality."
+    //         }
+    //     ],
+
+    //     architecture: [
+    //         {
+    //             title: "RUNTIME",
+    //             text: "Node.js"
+    //         },
+    //         {
+    //             title: "FRAMEWORK",
+    //             text: "Express.js"
+    //         },
+    //         {
+    //             title: "API",
+    //             text: "REST"
+    //         },
+    //         {
+    //             title: "DATABASE",
+    //             text: "MongoDB"
+    //         }
+    //     ],
+
+    //     process: [
+    //         {
+    //             text: "Client sends an HTTP request."
+    //         },
+    //         {
+    //             text: "Express route receives the request."
+    //         },
+    //         {
+    //             text: "Controller processes the request."
+    //         },
+    //         {
+    //             text: "The API returns a structured response."
+    //         }
+    //     ],
+
+    //     screenshots: [],
+
+    //     challenges: [
+    //         "Structuring a backend application into separate components.",
+    //         "Understanding how controllers, routes and middleware work together.",
+    //         "Designing and testing REST API endpoints."
+    //     ]
+    // },
 
     {
         title: "WEATHER APPLICATION",
